@@ -7,7 +7,7 @@ This Flask application provides a movie recommendation system based on collabora
 Before running the application, make sure you have the following installed on your system:
 
 - Python (version 3.9 ---> 3.6 is ok)
-- Anaconda (to create and activate virtual environment)
+- Anaconda (to create and activate a virtual environment)
 - Jupyter Notebook (for data preprocessing and visualization)
 
 ## Setup
@@ -46,8 +46,15 @@ Follow the steps below to set up and run the application:
    http://127.0.0.1:4998/
    ```
 
+      ![Movies](images/home.png)
+
+
    From there, you can navigate to different sections of the website, such as movies, actors, and popular movies, using the following URLs:
-Thbe movies and actors are scraped from IMDB website using web scraping `Beautiful Soup` Library
+Thbe movies and actors are scraped from IMDB website using web scraping `Beautiful Soup` Library.
+The code for this is found at
+
+ ` https://github.com/kavyakonisa123/Movie_retrieval `
+
    - Movies: `http://127.0.0.1:4998/movies`
 
    ![Movies](images/movies.png)
@@ -74,7 +81,7 @@ Thbe movies and actors are scraped from IMDB website using web scraping `Beautif
 
   Movies recommended for Movie `Made`
   
-   - ![Recommended Movies](images/recommendation.png)
+   - ![Recommended Movies](images/recommendations.png)
 
 ## Jupyter Notebook
 
