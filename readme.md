@@ -1,77 +1,93 @@
+# Movie Recommendation Flask Application
 
-Readme
+This Flask application provides a movie recommendation system based on collaborative filtering. It includes features such as browsing movies, actors, and popular movies, as well as searching for movies and getting recommendations based on user preferences. The application is built using Python and the Flask framework.
 
-•	Open the terminal 
+## Requirements
 
-•	Create a virtual environment using conda
+Before running the application, make sure you have the following installed on your system:
 
+- Python (version 3.9 ---> 3.6 is ok)
+- Anaconda (to create and activate virtual environment)
+- Jupyter Notebook (for data preprocessing and visualization)
 
-Step 1: Check if conda is installed in your path.  
+## Setup
 
->>>conda -V
+Follow the steps below to set up and run the application:
 
-Step 2: Update the conda environment 
+1. Open the terminal.
+2. Create a virtual environment using conda with the following commands:
 
->>>conda update conda
+   ```shell
+   conda create -n <envname> python=3.9 anaconda
+   conda activate <envname>
+   ```
 
-Step 3: Set up the virtual environment 
+   Replace `<envname>` with the desired name for your virtual environment.
 
->>>conda create -n <envname> python=x.x anaconda
+3. Place the `templates`, `static`, `test.py`, `final.csv`, `actor1.xlxs`, `tmdb_movies_data.csv`, and `requirements.txt` files in the virtual environment directory.
 
-Step 4: Activating the virtual environment
+4. Install the required Python modules by running the following command:
 
->>>conda activate <envname>
+   ```shell
+   pip install -r requirements.txt
+   ```
 
-•	Place the templates, static, test.py, and final.csv , actor1.xlxs,  tmdb_movies_data.csv  , requirements.txt in the virtual environment
+   Make sure the `requirements.txt` file is present in the virtual environment folder.
 
-•	Use the command to install all the required python modules
+5. Run the Flask application using the following command:
 
->>>pip install -r requirements. txt  
-(Make sure it creates the requirements .txt file in the folder)
+   ```shell
+   python test.py
+   ```
 
-•	Run the flask application 
+6. Open a web browser and enter the following URL to access the home page of the website:
 
->>>Python test.py
+   ```
+   http://127.0.0.1:4998/
+   ```
 
-•	Open the browser and paste the localhost address along with route decorator
+   From there, you can navigate to different sections of the website, such as movies, actors, and popular movies, using the following URLs:
+Thbe movies and actors are scraped from IMDB website using web scraping `Beautiful Soup` Library
+   - Movies: `http://127.0.0.1:4998/movies`
 
-http://127.0.0.1:4998/
-This will open the home page of the website.
-You can navigate to movies, actors and popular movies in the
-
-http://127.0.0.1:4998/actors
-
-http://127.0.0.1:4998/movies
-
-http://127.0.0.1:4998/highest
-
-
-You can search for a movie in the search box. If it is present in the database, it recommends similar movies. If it is not present, it shows the movie is not in the database.
-
-Ex: try 
-
-The Godfather
-Avengers: Age of Ultron 
-
-Etc. to see the recommended movie
+   ![Movies](images/movies.png)
 
 
-In the terminal,
-Run  
-            jupyter notebook.
-
-Run all cells to see data preprocessing, visualization is done.
-Check the collaborative filtering by changing the uid. It results in similar movies for that user.
+   - Actors: `http://127.0.0.1:4998/actors`
 
 
-References:-
-
-•	https://www.analyticsvidhya.com/blog/2022/01/movie-recommendation-engine-with-nlp/
-•	https://www.kaggle.com/code/alaanabil98/investigate-tmdb-10000-movies-dataset/notebook
-•	https://www.kaggle.com/code/morrisb/how-to-recommend-anything-deep-recommender
-•	https://towardsdatascience.com/how-to-build-a-movie-recommendation-system-67e321339109
+   ![Actors](images/actors.png)
 
 
+   Popular movies are movies with the highest rating
 
+      - Popular Movies: `http://127.0.0.1:4998/highest`
 
-![image](https://user-images.githubusercontent.com/110701700/220211935-6ae8b1bb-dfa8-43bd-9517-051d9c7a6801.png)
+   ![Popular Movies](images/popular.png)
+
+8. To search for a movie, enter its name in the search box. The application will recommend similar movies if the movie is in the database. If the movie is not found, a message indicating that the movie is not in the database will be displayed.
+
+   Example movie titles to try:
+
+   - The Godfather
+   - Avengers: Age of Ultron
+
+  Movies recommended for Movie `Made`
+  
+   - ![Recommended Movies](images/recommendation.png)
+
+## Jupyter Notebook
+
+To explore the data preprocessing, visualization, and collaborative filtering parts of the application, follow these steps:
+
+1. In the terminal, run the command `jupyter notebook`.
+2. Open the Jupyter Notebook file included with the application.
+3. Run all cells in the notebook to see how the data preprocessing and visualization are done.
+4. Experiment with the collaborative filtering by changing the `uid` (user ID) to see recommendations for different users.
+
+## References
+
+- [Movie Recommendation Engine with NLP](https://www.analyticsvidhya.com/blog/2022/01/movie-recommendation-engine-with-nlp/)
+- [Investigating TMDB 10,000 Movies Dataset](https://www.kaggle.com/code/alaanabil98/investigate-tmdb-10000-movies-dataset/notebook)
+- [How to Recommend Anything: Deep Recommender](https://www.kaggle.com/code/morrisb/how-to-recommend-anything-deep-recommender)
+- [How to Build a Movie Recommendation System](https://towardsdatascience.com/how-to-build-a-movie-recommendation
